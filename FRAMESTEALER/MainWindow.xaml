@@ -56,10 +56,17 @@
         Margin="335,15,335,25" Grid.Row="2"
         Click="CaptureFrame_Click"/>
 
+            <Button Content="Capture Sequence"
+        Width="150"
+        Height="40"
+        Margin="10"
+        Click="CaptureSequence_Click"/>
+
             <Button Content="Export MP4"
                 Width="130"
                 Height="40"
-                Margin="548,15,122,25" Grid.Row="2"/>
+                Margin="548,15,122,25" Grid.Row="2"
+                Click="ExportVideo_Click"/>
 
         </Grid>
     </Grid>
