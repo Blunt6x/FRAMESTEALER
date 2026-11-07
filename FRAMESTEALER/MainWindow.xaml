@@ -1,0 +1,66 @@
+﻿<Window x:Class="FRAMESTEALER.MainWindow"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FRAMESTEALER"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Background="#171717">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <!-- Top bar -->
+            <DockPanel Grid.Row="0" Margin="20,0">
+                <TextBlock Text="FRAMESTEALER"
+                   Foreground="White"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"/>
+
+                <TextBlock Text="HTML ANIMATION STUDIO"
+                   Foreground="#888888"
+                   FontSize="11"
+                   VerticalAlignment="Center"
+                   Margin="15,5"/>
+            </DockPanel>
+
+            <!-- Preview area -->
+            <Border Grid.Row="1"
+            Background="#222222"
+            CornerRadius="8"
+            Margin="20">
+                <wv2:WebView2 x:Name="AnimationPreview"/>
+            </Border>
+
+            <!-- Bottom controls -->
+            <StackPanel Grid.Row="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+            <Button Content="Import HTML"
+                Width="130"
+                Height="40"
+                Margin="102,15,568,25"
+                 Click="ImportHtml_Click" Grid.Row="2"/>
+
+            <Button Content="Capture Frame"
+        Width="130"
+        Height="40"
+        Margin="335,15,335,25" Grid.Row="2"
+        Click="CaptureFrame_Click"/>
+
+            <Button Content="Export MP4"
+                Width="130"
+                Height="40"
+                Margin="548,15,122,25" Grid.Row="2"/>
+
+        </Grid>
+    </Grid>
+</Window>
